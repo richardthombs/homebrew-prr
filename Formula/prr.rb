@@ -8,6 +8,13 @@ class Prr < Formula
   version "0.3.0"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/richardthombs/prr/releases/download/v0.3.0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d6007da0a7b1bd3bb294e7cc426508ce2ae3904a707fb79ac69400c2c93aeed3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "225430b014205f334b3e4bf775ba15659f49680826cd21aa03b6eca5a853e418"
+  end
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/richardthombs/prr/releases/download/v0.3.0/prr_0.3.0_darwin_amd64.tar.gz"
