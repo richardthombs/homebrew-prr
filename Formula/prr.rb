@@ -5,21 +5,21 @@
 class Prr < Formula
   desc "CLI tool that automates pull request review from a single command"
   homepage "https://github.com/richardthombs/prr"
-  version "0.1.3"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/richardthombs/prr/releases/download/v0.1.3/prr_0.1.3_darwin_amd64.tar.gz"
-      sha256 "507d0a4f08f39a14d7d0b5511eb9159fdbea786f1ce8f44b343122c06f22fe7b"
+      url "https://github.com/richardthombs/prr/releases/download/v0.2.0/prr_0.2.0_darwin_amd64.tar.gz"
+      sha256 "36bd8c789b18b14e430edd543103ab0e52dbbfbcfafac5ce219de4128443c028"
 
       define_method(:install) do
         bin.install "prr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/richardthombs/prr/releases/download/v0.1.3/prr_0.1.3_darwin_arm64.tar.gz"
-      sha256 "c29af2b88dc07b8ca171c39e51c5387d4349ab45bec8fa40c922a889585dac6a"
+      url "https://github.com/richardthombs/prr/releases/download/v0.2.0/prr_0.2.0_darwin_arm64.tar.gz"
+      sha256 "6d9a6e30e0d0271c612a3019760d5388b16b04e6ac9d9ecbd99eaf8ce6feea22"
 
       define_method(:install) do
         bin.install "prr"
@@ -29,15 +29,15 @@ class Prr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/richardthombs/prr/releases/download/v0.1.3/prr_0.1.3_linux_amd64.tar.gz"
-      sha256 "e16cd8c8ef8a0ffe6a44231742a3ec476267ed96490caf9e4418fb3f63ec1de7"
+      url "https://github.com/richardthombs/prr/releases/download/v0.2.0/prr_0.2.0_linux_amd64.tar.gz"
+      sha256 "6380e5f60c5dce80a601afee3d4235f58cf5f9ecb072f65aa9ec7cb4773b473a"
       define_method(:install) do
         bin.install "prr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/richardthombs/prr/releases/download/v0.1.3/prr_0.1.3_linux_arm64.tar.gz"
-      sha256 "6d005ae894b9a728c4a2fb1113b34a483357f02844d4d438de7343e14d69a862"
+      url "https://github.com/richardthombs/prr/releases/download/v0.2.0/prr_0.2.0_linux_arm64.tar.gz"
+      sha256 "e9ae6867ab0ab7deff4d4c1e750c5df2106fa84c473ea8b1e2b8dbd5ac8bf224"
       define_method(:install) do
         bin.install "prr"
       end
