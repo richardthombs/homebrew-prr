@@ -5,28 +5,21 @@
 class Prr < Formula
   desc "CLI tool that automates pull request review from a single command"
   homepage "https://github.com/richardthombs/prr"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/richardthombs/prr/releases/download/v0.4.0"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9a933881df6380201c1cfa0d2c4f93126d0f1e1001af1eb67f9049d567bd6d78"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d4b61826c5f8a0179dd22421f76069f1435889105640ba5b8e14af9d8bdbe243"
-  end
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/richardthombs/prr/releases/download/v0.4.0/prr_0.4.0_darwin_amd64.tar.gz"
-      sha256 "fc8ca065dbcc4685755d86d5b67a6e5eeece53dcb0d29f512c376e2cd55bf135"
+      url "https://github.com/richardthombs/prr/releases/download/v0.5.0/prr_0.5.0_darwin_amd64.tar.gz"
+      sha256 "216645482e68e1b534b01ffd145ddfac9a362c81651bc4ced8aa3509fde244d1"
 
       define_method(:install) do
         bin.install "prr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/richardthombs/prr/releases/download/v0.4.0/prr_0.4.0_darwin_arm64.tar.gz"
-      sha256 "1bcc28eb713b4bbc8c4e41462a7c5fa865dd5a69bb215d1f5c1c6cf73ad20f30"
+      url "https://github.com/richardthombs/prr/releases/download/v0.5.0/prr_0.5.0_darwin_arm64.tar.gz"
+      sha256 "45532e2402392244ceb18c4e01a2461d9a6b7749cd35cadfa190da7aa56d65a3"
 
       define_method(:install) do
         bin.install "prr"
@@ -36,15 +29,15 @@ class Prr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/richardthombs/prr/releases/download/v0.4.0/prr_0.4.0_linux_amd64.tar.gz"
-      sha256 "2de8b33a66f8c69bc64efaad1da92d8350f1065e317109cc274dab68b5c74756"
+      url "https://github.com/richardthombs/prr/releases/download/v0.5.0/prr_0.5.0_linux_amd64.tar.gz"
+      sha256 "2322660e2fa8d7909c9db3a458ac8992307b5c7f4ceee7edc3578ac6769ed90d"
       define_method(:install) do
         bin.install "prr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/richardthombs/prr/releases/download/v0.4.0/prr_0.4.0_linux_arm64.tar.gz"
-      sha256 "baa92d133e5de4ed5d01f0a15928bdcb323a33ded63d526705e165976df04d18"
+      url "https://github.com/richardthombs/prr/releases/download/v0.5.0/prr_0.5.0_linux_arm64.tar.gz"
+      sha256 "8a30a5ab4a283a13598890ef8a680bcecc0bdbd22df81b2d2275fda1f5c83ef8"
       define_method(:install) do
         bin.install "prr"
       end
